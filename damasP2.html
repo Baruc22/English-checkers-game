@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DAMAS PRUEBA</title>
+		<link rel="stylesheet" href="gamedamas2.css"/>
+	</head>
+	<body>
+		<div class="encabezado"></div>
+		<div class="juego"id="tablero">
+
+			<div class="blanco"></div>
+
+			<div class="negro" type="button" id="p1" x="1">
+				<div class="ficha" id="f1r"></div>
+			</div>
+
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+
+			<div class="negro" type="button" id="p5" ></div>
+
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+			<div class="negro"></div>
+			<div class="blanco"></div>
+		</div>
+		<div class="encabezado"></div>
+		<script type="text/javascript">
+			var c5=document.getElementById("p5");
+			var c1=document.getElementById("p1");
+			var click1=0;
+			var band=0;
+			/*c1.addEventListener("mouseover",function(){
+				c5.style.backgroundColor="blue";
+			},false);*/
+
+			/*c1.addEventListener("mouseout",function(){
+				c5.style.backgroundColor="";
+			},false);*/
+
+			c1.addEventListener("click",function(){
+				c1.removeChild(c1.firstChild);
+				c5.style.backgroundColor="blue";
+				/*if(click1==1){					
+					c5.style.backgroundColor="blue";
+					click1=0;
+					band=1;
+				}
+				else{
+					click1=1;
+				}*/
+				
+			},false); //fase de subida
+
+			c5.addEventListener("click",function(){
+				//if(band==1){
+					var div=document.createElement("div");
+					div.className="ficha";				
+					c5.appendChild(div);
+					c5.style.backgroundColor="";
+					c1.removeChild(c1.firstChild);
+					//band=0;
+				//}
+				
+			},false); //fase de subida
+			
+		</script>
+	</body>
+</html>
